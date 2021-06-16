@@ -1,0 +1,119 @@
+body {
+    height: 100vh;
+    background-image: url("https://images7.alphacoders.com/384/384265.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slot {
+    width: 120px;
+    height: 120px;
+
+    overflow: visible;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    border: 1.5px rgba(0, 0, 0, 0.8) solid;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+@keyframes glow3 {
+    from {
+        box-shadow: 0 0 15px -6px #e6007386;
+    }
+    to {
+        box-shadow: 0 0 15px 6px #ff4da6;
+    }
+}
+@keyframes glow2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+            0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+            0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #f5dfea, 0 0 40px #ff4da6,
+            0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,
+            0 0 80px #ff4da6;
+    }
+}
+
+#board {
+    display: flex;
+}
+
+.player1 .hole {
+    background-image: url("https://media.giphy.com/media/rxYG6rKr0iQla/giphy.gif");
+    background-size: 100px 100px;
+    transform: rotate(3turn);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.player2 .hole {
+    background-image: url("https://media.giphy.com/media/e5kbmb3wX3J1S/giphy.gif");
+
+    background-size: 115px 100px;
+    transform: rotate(3turn);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: visible;
+}
+
+#welcome {
+    width: 700px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    animation: glow3 1s infinite alternate;
+}
+#welcome-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 60%;
+    position: absolute;
+    z-index: 10;
+}
+img {
+    flex-basis: 50%;
+    height: 225px;
+    width: 250px;
+    position: relative;
+    border-radius: 50px;
+    margin: 10;
+}
+
+#players {
+    display: flex;
+}
+h1 {
+    animation: glow2 30s infinite alternate;
+    font-family: "bebas";
+    margin: 1px;
+}
