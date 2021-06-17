@@ -1,170 +1,80 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css" />
-        <title>Connect Four</title>
-        <script src="index.js" ></script>
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> ~ A Q U A F O U R ~ </title>
+</head>
+<body>
     
+    <h1>A Q U A F O U R</h1>
+
+    <h3 class="player-turn"></h3>
+    <div class="container">
+
+    <table>
+        <tr>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+        </tr>
+        <tr>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+        </tr>
+        <tr>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+        </tr>
+        <tr>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+        </tr>
+        <tr>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+        </tr>
+        <tr>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+            <td class="slot"></td>
+        </tr>
         
-    <body>
-        <div id="overlay"></div>
-        <div id="welcome-container">
-            <div id="welcome">
-                <h1>Connect Four</h1>
-                 <h1>Li'l Axel VS Octubby</h1>
-                <div id="players"><img id="img1" src="https://media.giphy.com/media/iCOZGQacrbNZu/giphy.gif" alt="" >
-                    <img id="img2" src="https://media.giphy.com/media/I3FV47ePeP28w/giphy.gif" alt="" height="" ></div> 
- </div></div>
-        
-        <div id="board">
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3"> 
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
+</div>
 
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
+<div class="reset">Reset</div>
 
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="slot row0">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row1">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row2">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row3">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row4">
-                    <div class="hole"></div>
-                </div>
-                <div class="slot row5">
-                    <div class="hole"></div>
-                </div>
-            </div>
-        </div>
-
-    </body>
+    
+<script src="index.js"></script>
+</body>
 </html>
