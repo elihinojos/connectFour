@@ -53,6 +53,7 @@ function changeColor(e){
               //it current player is one, we take the first index of the player's array equal to player one color
             
               row[0].classList.add('playerOneImg')//.style.backgroundColor = 'orange';
+              row[0].style.backgroundColor ='orange';
               console.log(row[0].classList);
 
               if (horizontalCheck() || verticalCheck() || diagonalCheck() || diagonalCheck2()){
@@ -69,6 +70,7 @@ function changeColor(e){
           }else {
             
               row[0].classList.add('playerTwoImg')//.style.backgroundColor = 'purple';
+              row[0].style.backgroundColor = 'purple';
               console.log(row[0].classList);
 
               if (horizontalCheck() || verticalCheck() || diagonalCheck() || diagonalCheck2()){
@@ -98,22 +100,32 @@ Array.prototype.forEach.call(tableData, (cell) => {
 });
 
 //
-function colorMatchCheck(one, two, three, four){
-  return (one === two && one === three && one === four && one !== 'transparent' && one !== undefined);
-}
+// function colorMatchCheck(one, two, three, four){
+//     console.log(one)
+//   return (one === two && one === three && one === four && one !== 'transparent' && one !== undefined);
+// }
 
 //can win four ways, vertical, horizontal, diag l-r, diag r-l
 
-function horizontalCheck(){
-  for (let row = 0; row < tableRow.length; row++){ //row counting from bottom up
-      for (let col =0; col < 4; col++){
-         if (colorMatchCheck(tableRow[row].children[col].style.backgroundColor,tableRow[row].children[col+1].style.backgroundColor, 
-                              tableRow[row].children[col+2].style.backgroundColor, tableRow[row].children[col+3].style.backgroundColor)){
-             return true;
-         }
-      }
+
+
+function colorMatchCheck(one, two, three, four){
+    return (one === two && one === three && one === four && one !== 'transparent' && one !== undefined);
   }
-}
+  
+  //can win four ways, vertical, horizontal, diag l-r, diag r-l
+  
+  function horizontalCheck(){
+    for (let row = 0; row < tableRow.length; row++){ //row counting from bottom up
+        for (let col =0; col < 4; col++){
+           if (colorMatchCheck(tableRow[row].children[col].style.backgroundColor,tableRow[row].children[col+1].style.backgroundColor, 
+                                tableRow[row].children[col+2].style.backgroundColor, tableRow[row].children[col+3].style.backgroundColor)){
+               return true;
+           }
+        }
+    }
+  }
+
 
 function verticalCheck(){
   for (let col = 0; col < 7; col++){
@@ -163,6 +175,12 @@ function drawCheck(){
 
 resetBtn.addEventListener('click', () => {
   slots.forEach(slot => {
+      if (slot.style.backgroundColor === 'orange') {
+          slot.classList.remove('playerOneImg')
+      }
+      else if (slot.style.backgroundColor === 'purple') {
+          slot.classList.remove('playerTwoImg')
+   }
       slot.style.backgroundColor = 'transparent';
   });
   playerTurn.style.color = 'black';
